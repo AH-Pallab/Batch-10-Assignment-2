@@ -58,6 +58,11 @@ header {
   background: linear-gradient(rgb(17, 17, 17), rgba(119, 119, 119, 0) 100%);
 }
 
+.bar {
+  color: white;
+  display: none;
+}
+
 header>nav {
   display: flex;
   padding: 60px 0;
@@ -110,7 +115,7 @@ header nav div p {
 #app-dnld {
   background-color: black;
   border: 2px solid white;
-  margin-left: 14px;
+  margin-left: 16px;
 }
 
 .banner img {
@@ -153,4 +158,53 @@ header nav div p {
   gap: 10px;
   right: 22vw;
   top: 650px;
+}
+
+
+
+@media screen and (max-width: 576px) {
+  .banner {
+    flex-direction: column;
+  }
+
+  header nav div {
+    display: none;
+  }
+
+  .bar {
+    display: inline;
+  }
+
+  .banner .title h1 {
+    font-size: 2rem;
+  }
+
+  .container {
+    width: 90%;
+  }
+
+  #join {
+    margin: 0 0 16px 16px;
+  }
+
+  h1 {
+    font-size: 28px;
+  }
+
+  h2 {
+    font-size: 18px;
+  }
+
+  #_500 {
+    font-size: 9px;
+  }
+
+  ._350 {
+    top: 860px;
+    right: 150px;
+  }
+
+  ._500 {
+    top: 610px;
+  }
 }
