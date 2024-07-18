@@ -160,8 +160,27 @@ header nav div p {
   top: 650px;
 }
 
+/* Change Your Habits */
+.habits {
+  text-align: center;
+}
+
+.habit-items {
+  display: grid;
+  grid-template-columns: repeat(2, 230px);
+  gap: 40px;
+  justify-content: center;
+}
+
+.habit-photos>img {
+  width: 180px;
+  height: 180px;
+  border-radius: 90px;
+  margin-bottom: 50px;
+}
 
 
+/* Mobile Screen Part */
 @media screen and (max-width: 576px) {
   .banner {
     flex-direction: column;
@@ -207,4 +226,10 @@ header nav div p {
   ._500 {
     top: 610px;
   }
+
+  /* Habit */
+  .habit-items {
+    grid-template-columns: repeat(1, 230px);
+  }
+
 }
