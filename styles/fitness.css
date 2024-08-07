@@ -33,10 +33,13 @@ h5 {
   margin-bottom: 28px;
 }
 
-p {
+p,
+td,
+th {
   font-size: 14px;
   color: rgba(255, 255, 255, 0.5);
   margin-bottom: 28px;
+  /* line-height: 15px; */
 }
 
 .btn-primary {
@@ -167,18 +170,197 @@ header nav div p {
 
 .habit-items {
   display: grid;
-  grid-template-columns: repeat(2, 230px);
+  grid-template-columns: repeat(4, 340px);
   gap: 40px;
   justify-content: center;
 }
 
+.habit-items h2 {
+  margin: 10px;
+}
+
 .habit-photos>img {
-  width: 180px;
-  height: 180px;
-  border-radius: 90px;
+  width: 300px;
+  height: 300px;
+  border-radius: 150px;
   margin-bottom: 50px;
 }
 
+/* ------RUN------- */
+.run {
+  background-color: rgba(35, 35, 35, 1);
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 250px;
+}
+
+.run>div {
+  padding-left: 50px;
+  width: 30%;
+}
+
+.run>img {
+  width: 40%;
+  margin: 40px 40px 40px 10px;
+  border-radius: 15px;
+}
+
+/* BMI */
+.bmi {
+  margin: 100px auto;
+  width: 45%;
+}
+
+/* Table */
+.bmi-table {
+  background-color: rgba(35, 35, 35, 1);
+  display: flex;
+  justify-content: space-evenly;
+  padding: 40px 0;
+  margin-bottom: 250px;
+  width: 100%;
+}
+
+input::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+input,
+select {
+  /* width: 60%; */
+  height: 50px;
+  border: none;
+  border-radius: 7px;
+  background-color: rgba(137, 137, 137, 0.142);
+  color: rgba(255, 255, 255, 0.6);
+  padding: 0px 30px;
+}
+
+option p {
+  color: rgb(223, 223, 223);
+}
+
+.calculate {
+  margin-top: 30px;
+}
+
+.inputs {
+  margin: 50px 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+#factor {
+  display: grid;
+  grid-column: span 2;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+caption {
+  margin: 30px 0;
+}
+
+th,
+td {
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-collapse: collapse;
+  padding: 15px 40px;
+}
+
+th {
+  color: white;
+  font-weight: bold;
+  font-size: 16px;
+  text-align: start;
+}
+
+/* Meet */
+.meet {
+  text-align: center;
+}
+
+#our-team {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  background-color: rgba(35, 35, 35, 1);
+  border-radius: 20px;
+  padding: 20px;
+}
+
+#our-team h2 {
+  position: relative;
+  display: flex;
+  font-size: 20px;
+  bottom: 60px;
+  left: 40px;
+}
+
+#our-team p {
+  position: relative;
+  display: flex;
+  bottom: 90px;
+  left: 40px;
+}
+
+#our-team img {
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+}
+
+/* Footer */
+footer {
+  margin-top: 100px;
+  background-color: rgba(35, 35, 35, 1);
+}
+
+footer #fit {
+  font-style: italic;
+  color: rgb(230, 83, 60);
+  font-size: 5rem;
+  font-weight: 800;
+}
+
+.extra-links {
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer-fitness {
+  width: 50%;
+}
+
+footer p {
+  font-size: 22px;
+}
+
+#fit-p {
+  text-align: start;
+  width: 70%;
+  font-size: 14px;
+}
+
+#rights {
+  padding: 32px;
+  text-align: center;
+  margin-bottom: 0;
+}
+
+footer .container {
+  margin-bottom: 0;
+  padding-top: 100px;
+}
+
+hr {
+  color: rgba(0, 0, 0, 0.514);
+}
 
 /* Mobile Screen Part */
 @media screen and (max-width: 576px) {
@@ -229,7 +411,78 @@ header nav div p {
 
   /* Habit */
   .habit-items {
-    grid-template-columns: repeat(1, 230px);
+    grid-template-columns: repeat(1, 300px);
   }
 
+  /* RUN */
+  .run {
+    flex-direction: column;
+  }
+
+  .run>div {
+    padding-left: 0px;
+    width: 80%;
+  }
+
+  .run>img {
+    width: 80%;
+  }
+
+  /* bmi */
+  .bmi-table {
+    flex-direction: column;
+  }
+
+  table,
+  .calculate {
+    width: 90%;
+    margin: 40px auto;
+  }
+
+  /* Meet Our Team */
+  #our-team {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  /* Footer */
+  .extra-links {
+    flex-direction: column;
+  }
+
+  .footer-fitness {
+    width: 100%;
+  }
+
+  #fit-p {
+    width: 100%;
+  }
+}
+
+/* Tablet */
+@media screen and (max-width: 1300px) and (min-width: 576px) {
+
+  /* Habit */
+  .habit-items {
+    grid-template-columns: repeat(2, 250px);
+    gap: 100px;
+  }
+
+  /* bmi */
+  .bmi-table {
+    flex-direction: column;
+  }
+
+  /* Footer */
+  .extra-links {
+    flex-direction: column;
+  }
+
+  .footer-fitness {
+    width: 100%;
+  }
+
+  #fit-p {
+    width: 100%;
+  }
+}
 }
