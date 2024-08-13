@@ -200,7 +200,7 @@ header nav div p {
 }
 
 .run>div {
-  padding-left: 50px;
+  padding: 40px;
   width: 30%;
 }
 
@@ -378,6 +378,7 @@ hr {
 
   header nav div {
     display: none;
+    border: none;
   }
 
   .bar {
@@ -428,7 +429,6 @@ hr {
   }
 
   .run>div {
-    padding-left: 0px;
     width: 80%;
   }
 
@@ -439,6 +439,10 @@ hr {
   /* bmi */
   .bmi-table {
     flex-direction: column;
+  }
+
+  .inputs {
+    grid-template-columns: repeat(2, 40vw);
   }
 
   table,
@@ -466,7 +470,7 @@ hr {
   }
 }
 
-/* 
+
 /* Tablet */
 @media screen and (max-width: 1300px) and (min-width: 576px) {
 
@@ -495,5 +499,3 @@ hr {
   }
 }
 }
-
-*/
